@@ -1,9 +1,39 @@
 // Style Variables
+$theme-colors: (
+  "danger": #ffb800,
+);
+$darker: #121517;
 
 // Import Reactstrap Styles
-@import 'bootstrap/dist/css/bootstrap.min.css';
+@import "node_modules/bootstrap/scss/bootstrap";
 
 // Main Styles
+.App {
+    background-color: $black;
+    height: 100vh;
+    width: 100vw;
+    overflow: none;
+}
+
+.Navbar {
+    background-color: $dark;
+    border-bottom: solid $gray-700 1px;
+}
+
+.title {
+    padding-left: 10px;
+}
+
+.Nodes {
+    padding: 1em;
+}
+
+.node {
+    background-color: $gray-800;
+    height: 2em;
+    width: 2em;
+    border-radius: 50%;
+}
 
 
 // Media Queries
