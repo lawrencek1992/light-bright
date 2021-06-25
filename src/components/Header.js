@@ -1,10 +1,13 @@
 import React from 'react';
+import { Navbar, NavbarText } from 'reactstrap';
 
 const Header = () => {
     return (
-        <div>
-
-        </div>
+        <Navbar className="Navbar" dark>
+            <NavbarText className="title">
+                Light-Bright
+            </NavbarText>
+        </Navbar>
     );
 };
 
