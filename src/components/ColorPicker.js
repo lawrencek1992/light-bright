@@ -16,7 +16,7 @@ const ColorPicker = () => {
         { largeScreens.matches
             ? (
                 <UncontrolledDropdown>
-                    <DropdownToggle nav caret>
+                    <DropdownToggle nav caret className="dropdown">
                         Color Picker
                     </DropdownToggle>
                     <DropdownMenu style={{"backgroundColor": "#212529"}} right>

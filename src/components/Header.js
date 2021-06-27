@@ -16,10 +16,10 @@ const Header = () => {
             <NavItem>
                 <Button className="reset-button">Reset</Button>
             </NavItem>
-            <NavItem>
+            <NavItem id="show-color">
                 <Button className="node" disabled />
-                <ColorPicker />
             </NavItem>
+            <ColorPicker />
         </Navbar>
     );
 };
