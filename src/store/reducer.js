@@ -11,13 +11,12 @@ export default function reducer (storeData, action) {
         case UPDATE: 
             return {
                 ...storeData,
-                action.node: action.newColor
+                [action.node]: action.newColor
             }
         case RESET:
+            const storeArray = [...storeData]
             let updatedStoreData = {}
-            for (item in storeData) {
-                item = "#343a40";
-            }
+            storeArray.map(item => updatedStoreData[item] = "#343a40")
             return updatedStoreData;
         default: 
             return storeData || initialData;
