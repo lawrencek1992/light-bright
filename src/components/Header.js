@@ -1,14 +1,21 @@
 import React from 'react';
-import { Navbar, NavbarText } from 'reactstrap';
+import { 
+    Navbar, 
+    NavItem, 
+    NavbarBrand
+} from 'reactstrap';
+import ColorPicker from './ColorPicker';
 
 const Header = () => {
-    // reset button
-    // color button group
     return (
         <Navbar className="Navbar" dark>
-            <NavbarText className="title">
+            <NavbarBrand className="title">
                 Light-Bright
-            </NavbarText>
+            </NavbarBrand>
+            {/* reset button */}
+            <NavItem>
+                <ColorPicker />
+            </NavItem>
         </Navbar>
     );
 };
