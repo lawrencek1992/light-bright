@@ -1,13 +1,17 @@
 import './style.scss';
 import Header from './components/Header';
 import Nodes from './components/Nodes';
+import { Provider } from 'react-redux';
+import store from './store';
 
-function App() {
+const App = () => {
   return (
-    <div className="App">
-      <Header />
-      <Nodes />
-    </div>
+    <Provider store={store}>
+      <div className="App">
+        <Header />
+        <Nodes />
+      </div>
+    </Provider>
   );
 }
 
