@@ -1,6 +1,7 @@
 // Style Variables
 $theme-colors: (
-  "danger": #ffb800,
+    // This is how you changed theme colors, syntax is different that when you were using React-Bootstrap. 
+//   "danger": #ffb800,
 );
 $darker: #121517;
 
@@ -12,7 +13,7 @@ $darker: #121517;
     background-color: $black;
     height: 100vh;
     width: 100vw;
-    overflow: none;
+    overflow: hidden;
 }
 
 .Navbar {
@@ -26,6 +27,8 @@ $darker: #121517;
 
 .Nodes {
     padding: 1em;
+    text-align: center;
+    overflow: hidden;
 }
 
 .node {
@@ -33,6 +36,8 @@ $darker: #121517;
     height: 2em;
     width: 2em;
     border-radius: 50%;
+    border: solid $gray-700 1px;
+    margin: 0.2em;
 }
 
 

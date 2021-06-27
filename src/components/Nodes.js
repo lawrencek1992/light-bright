@@ -1,26 +1,26 @@
 import React from 'react';
 import { 
     Container, 
-    Button 
+    Button,
 } from 'reactstrap'; 
 
 const Nodes = () => {
-    const mapNodes = () => {
-        let numNodes = 100;
-        let i = 0;
-        while (i <= numNodes) {
-            let nodeID = "node" + i;
-            i++
-            return (
-                <Button id={nodeID} className="node" />
-            );
+    const nodesGrid = () => {
+        let nodesArray = [];
+        for (let i = 1; i <= 1000; i++) {
+            nodesArray.push(i);
         }
+        return (
+            <>
+                { nodesArray.map((num) => (
+                    <Button className="node" key={num} id={`node${num}`} />
+                ))}
+            </>
+        )
     }
-
     return (
         <Container className="Nodes" fluid>
-            {mapNodes}
-            {/* <Button id="node1" className="node" /> */}
+            {nodesGrid()}
         </Container>
     );
 };
