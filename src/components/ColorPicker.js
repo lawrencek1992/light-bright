@@ -15,29 +15,23 @@ const ColorPicker = () => {
         <>
         { largeScreens.matches
             ? (
-                <>
-
-                    {/* Ultimately you want these buttons to be a gray color until they are clicked, and then you want them to turn their color. If another button is clicked, you want them to turn back to gray. You'll probably do this with state. */}
-
-                    <Button className="node" />
-                    <UncontrolledDropdown>
-                        <DropdownToggle nav caret>
-                            Color Picker
-                        </DropdownToggle>
-                        <DropdownMenu style={{"backgroundColor": "#212529"}} right>
-                            <DropdownItem className="btn-red">Red</DropdownItem>
-                            <DropdownItem className="btn-orange">Orange</DropdownItem>
-                            <DropdownItem className="btn-yellow">Yellow</DropdownItem>
-                            <DropdownItem className="btn-green">Green</DropdownItem>
-                            <DropdownItem className="btn-blue">Blue</DropdownItem>
-                            <DropdownItem className="btn-pink">Pink</DropdownItem>
-                            <DropdownItem className="btn-purple">Purple</DropdownItem>
-                            <DropdownItem className="btn-brown">Brown</DropdownItem>
-                            <DropdownItem className="btn-black">Black</DropdownItem>
-                            <DropdownItem className="btn-white">White</DropdownItem>
-                        </DropdownMenu>
-                    </UncontrolledDropdown>
-                </>
+                <UncontrolledDropdown>
+                    <DropdownToggle nav caret>
+                        Color Picker
+                    </DropdownToggle>
+                    <DropdownMenu style={{"backgroundColor": "#212529"}} right>
+                        <DropdownItem className="btn-red">Red</DropdownItem>
+                        <DropdownItem className="btn-orange">Orange</DropdownItem>
+                        <DropdownItem className="btn-yellow">Yellow</DropdownItem>
+                        <DropdownItem className="btn-green">Green</DropdownItem>
+                        <DropdownItem className="btn-blue">Blue</DropdownItem>
+                        <DropdownItem className="btn-pink">Pink</DropdownItem>
+                        <DropdownItem className="btn-purple">Purple</DropdownItem>
+                        <DropdownItem className="btn-brown">Brown</DropdownItem>
+                        <DropdownItem className="btn-black">Black</DropdownItem>
+                        <DropdownItem className="btn-white">White</DropdownItem>
+                    </DropdownMenu>
+                </UncontrolledDropdown>
             )
             :
             (

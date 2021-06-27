@@ -2,7 +2,8 @@ import React from 'react';
 import { 
     Navbar, 
     NavItem, 
-    NavbarBrand
+    NavbarBrand,
+    Button
 } from 'reactstrap';
 import ColorPicker from './ColorPicker';
 
@@ -12,8 +13,11 @@ const Header = () => {
             <NavbarBrand className="title">
                 Light-Bright
             </NavbarBrand>
-            {/* reset button */}
             <NavItem>
+                <Button className="reset-button">Reset</Button>
+            </NavItem>
+            <NavItem>
+                <Button className="node" disabled />
                 <ColorPicker />
             </NavItem>
         </Navbar>
