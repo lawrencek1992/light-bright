@@ -7,7 +7,7 @@ import {
 const Nodes = () => {
     const nodesGrid = () => {
         let nodesArray = [];
-        for (let i = 1; i <= 1000; i++) {
+        for (let i = 1; i <= 1300; i++) {
             nodesArray.push(i);
         }
         return (
