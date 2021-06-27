@@ -7,8 +7,7 @@ initialNodeColors.currentColor = "#343a40";
 nodesArray.forEach(element => {
     let nodeID = "node" + element;
     let nodeColor = "#343a40"; // $gray-800
-    initialNodeColors.id = nodeID;
-    initialNodeColors.color = nodeColor;
+    initialNodeColors[nodeID] = nodeColor;
 })
 
 export const initialData = initialNodeColors;
