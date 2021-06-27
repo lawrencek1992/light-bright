@@ -45,44 +45,44 @@ $darker: #121517;
 }
 
 .btn-red {
-    background-color: red;
+    background-color: $red;
 }
 
 .btn-orange {
-    background-color: orange;
+    background-color: $orange;
 }
 
 .btn-yellow {
-    background-color: yellow;
+    background-color: $yellow;
 }
 
 .btn-green {
-    background-color: green;
+    background-color: $green;
 }
 
 .btn-blue {
-    background-color: cyan;
+    background-color: $cyan;
 }
 
-.btn-indigo {
-    background-color: blue;
+.btn-pink {
+    background-color: $pink;
 }
 
 .btn-purple {
-    background-color: purple;
+    background-color: $purple;
 }
 
 .btn-brown {
-    background-color: brown;
+    background-color: #964B00;
 }
 
 .btn-black {
-    background-color: black;
-    color: white;
+    background-color: $black;
+    color: $white;
 }
 
 .btn-white {
-    background-color: white;
+    background-color: $white;
 }
 
 
