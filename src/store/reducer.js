@@ -8,7 +8,7 @@ export default function reducer (storeData, action) {
             updatedStoreData.currentColor = action.payload;
             return updatedStoreData;
         case UPDATE: 
-            updatedStoreData.payload.node = action.payload.newColor;
+            updatedStoreData[action.payload.node] = action.payload.newColor;
             return updatedStoreData;
         case RESET:
             return initialData;
