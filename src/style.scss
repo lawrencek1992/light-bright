@@ -43,13 +43,13 @@ $brown: #964B00;
     border-bottom: solid $gray-700 1px;
 }
 
-.reset-button {
+#reset-button {
     background-color: $gray-800;
     color: $white;
     border: solid 1px $gray-200;
 }
 
-.reset-button:hover, .reset-button:focus {
+#reset-button:hover, #reset-button:focus {
     color: $gray-500;
     border: solid 1px $gray-500;
     background-color: $gray-900;
