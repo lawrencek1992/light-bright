@@ -12,8 +12,7 @@ import ColorPicker from './ColorPicker';
 const Header = () => {
     const currentColor = useSelector((state) => state.currentColor);
     const dispatch = useDispatch();
-    // You need to use the RESET action creator to reset all of the nodes background colors, as well as currentColor to the standard gray. 
-
+    
     return (
         <Navbar className="Navbar" dark>
             <NavbarBrand className="title">
