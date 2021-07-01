@@ -13,11 +13,6 @@ import ResetWarning from './ResetWarning';
 const Header = () => {
     const [showWarning, setShowWarning] = useState(false);
     const currentColor = useSelector((state) => state.currentColor);
-    const dispatch = useDispatch();
-
-    const reloadPage = () => {
-        window.location.reload();
-    }
     
     return (
         <Navbar className="Navbar" dark>
