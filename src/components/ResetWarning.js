@@ -18,10 +18,10 @@ const ResetWarning = ({ showWarning, setShowWarning }) => {
     }
 
     return (
-        <Modal isOpen={showWarning} toggle={toggle} fade={true} className="ResetWarning" light="false" centered>
-            <ModalHeader toggle={toggle} color="dark"></ModalHeader>
-            <ModalBody color="dark" >Are you sure you want to reset? All progress will be lost. </ModalBody>
-            <ModalFooter color="dark">
+        <Modal isOpen={showWarning} toggle={toggle} fade={true} className="ResetWarning" centered>
+            <ModalHeader toggle={toggle} />
+            <ModalBody >Are you sure you want to reset? All progress will be lost. </ModalBody>
+            <ModalFooter>
                 <Button className="btn-red" tag="button" onClick={() => {
                     dispatch({ type: RESET });
                     reloadPage();
