@@ -32,8 +32,6 @@ const Nodes = () => {
                         }}
                     />
                 ))}
-                {/* Add something like what's below to set the background color of each node on UPDATE */}
-                {/* style={{ backgroundColor: `${nodeColor}`}} */}
             </>
         )
     }
