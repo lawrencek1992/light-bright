@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { RESET } from '../store/actionTypes';
 import { useSelector, useDispatch } from 'react-redux';
 import { 
@@ -8,9 +8,10 @@ import {
     Button
 } from 'reactstrap';
 import ColorPicker from './ColorPicker';
+import ResetWarning from './ResetWarning';
 
 const Header = () => {
-    const nodes = useSelector((state) => state.nodes);
+    const [showWarning, setShowWarning] = useState(false);
     const currentColor = useSelector((state) => state.currentColor);
     const dispatch = useDispatch();
 
@@ -20,22 +21,19 @@ const Header = () => {
     
     return (
         <Navbar className="Navbar" dark>
-            <NavbarBrand className="title">
+            <NavbarBrand id="title">
                 Light-Bright
             </NavbarBrand>
             <NavItem>
                 <Button 
                     id="reset-button" 
-                    onClick={() => {
-                        dispatch({ type: RESET});
-                        reloadPage();
-                    }
-                }>Reset</Button>
+                    onClick={() => setShowWarning(true)}>Reset</Button>
             </NavItem>
             <NavItem className="show-color">
                 <Button className="node" style={{ backgroundColor: `${currentColor}`}} disabled />
             </NavItem>
             <ColorPicker />
+            <ResetWarning showWarning={showWarning} setShowWarning={setShowWarning} />
         </Navbar>
     );
 };
