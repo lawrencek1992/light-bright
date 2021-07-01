@@ -1,12 +1,19 @@
+// Custom Style Variables
+$darker: #121517;
+$brown: #964B00;
+$white: #fff;
+$gray-200: #e9ecef;
+
 // Redefine Bootstrap Variables
+$modal-content-bg: $darker;
+$modal-content-color: $gray-200;
+$modal-content-border-color: #343a40;
+$modal-header-border-color: #343a40;
+$modal-footer-border-color: #343a40;
 $theme-colors: (
     // This is how you changed theme colors, syntax for Reactstrap is different than React-Bootstrap. 
 //   "danger": #ffb800,
 );
-
-// Custom Style Variables
-$darker: #121517;
-$brown: #964B00;
 
 // Import Reactstrap Styles
 @import "node_modules/bootstrap/scss/bootstrap";
@@ -19,8 +26,15 @@ $brown: #964B00;
     overflow: hidden;
 }
 
-.title {
+#title {
+    color: $white;
     padding-left: 10px;
+}
+
+.close {
+    color: $gray-800; 
+    opacity: 1;
+    text-shadow: none;
 }
 
 .Nodes {
@@ -139,6 +153,16 @@ $brown: #964B00;
 
 .btn-white:hover, .btn-white:focus {
     background-color: $gray-400;
+}
+
+.btn-gray {
+    background-color: $gray-600;
+    color: $gray-900;
+}
+
+.btn-gray:hover, .btn-gray:focus {
+    background-color: $gray-800;
+    color: $gray-400;
 }
 
 .dropdown {
