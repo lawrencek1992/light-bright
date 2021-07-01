@@ -9,9 +9,11 @@ import {
 } from 'reactstrap';
 import ColorPicker from './ColorPicker';
 import ResetWarning from './ResetWarning';
+import Instructions from './Instructions';
 
 const Header = () => {
     const [showWarning, setShowWarning] = useState(false);
+    const [showInstructions, setShowInstructions] = useState(true);
     const currentColor = useSelector((state) => state.currentColor);
     
     return (
@@ -29,6 +31,7 @@ const Header = () => {
             </NavItem>
             <ColorPicker />
             <ResetWarning showWarning={showWarning} setShowWarning={setShowWarning} />
+            <Instructions showInstructions={showInstructions} setShowInstructions={setShowInstructions} />
         </Navbar>
     );
 };
