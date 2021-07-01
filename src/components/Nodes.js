@@ -17,10 +17,9 @@ const Nodes = () => {
         nodesArray.push(i);
     }
 
-    const nodesGrid = () => {
-        return (
-            <>
-                { nodesArray.map((num) => (
+    return (
+        <Container className="Nodes" fluid>
+            { nodesArray.map((num) => (
                     <Button 
                         className="node" 
                         key={num} 
@@ -32,14 +31,8 @@ const Nodes = () => {
                         }}
                     />
                 ))}
-            </>
-        )
-    }
-    return (
-        <Container className="Nodes" fluid>
-            {nodesGrid()}
         </Container>
-    );
+    )
 };
 
 export default Nodes;
