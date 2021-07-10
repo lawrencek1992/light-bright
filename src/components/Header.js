@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
-import { RESET } from '../store/actionTypes';
-import { useSelector, useDispatch } from 'react-redux';
+import { useSelector } from 'react-redux';
 import { 
     Navbar, 
     NavItem, 
