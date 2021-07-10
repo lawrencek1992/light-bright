@@ -47,8 +47,6 @@ const Nodes = () => {
                         style={{ backgroundColor: `${nodes[num]}`}}
                         onClick={(event, num) => {
                             handleClick(event, num);
-                            // dispatch({ type: UPDATE, payload: {node: num, newColor: currentColor}});
-                            // event.target.style.backgroundColor = nodes[num];
                         }}
                     />
                 ))}
