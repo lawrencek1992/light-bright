@@ -17,6 +17,26 @@ const Nodes = () => {
         nodesArray.push(i);
     }
 
+    const originalColor = "#343a40";
+
+    // Handle single and double clicks:
+    const handleClick = (e, num) => {
+        switch(e.detail) {
+            case 1: 
+                dispatch({ type: UPDATE, payload: {node: num, newColor: currentColor}});
+                e.target.style.backgroundColor = nodes[num];
+                break;
+            case 2: 
+                dispatch({ type: UPDATE, payload: {node: num, newColor: originalColor }});
+                e.target.style.backgroundColor = nodes[num];
+                break;
+            default: 
+                dispatch({ type: UPDATE, payload: {node: num, newColor: originalColor }});
+                e.target.style.backgroundColor = nodes[num];
+                break;
+        }
+    }
+
     return (
         <Container className="Nodes" fluid>
             { nodesArray.map((num) => (
@@ -25,9 +45,10 @@ const Nodes = () => {
                         key={num} 
                         id={num} 
                         style={{ backgroundColor: `${nodes[num]}`}}
-                        onClick={(event) => {
-                            dispatch({ type: UPDATE, payload: {node: num, newColor: currentColor}});
-                            event.target.style.backgroundColor = nodes[num];
+                        onClick={(event, num) => {
+                            handleClick(event, num);
+                            // dispatch({ type: UPDATE, payload: {node: num, newColor: currentColor}});
+                            // event.target.style.backgroundColor = nodes[num];
                         }}
                     />
                 ))}
