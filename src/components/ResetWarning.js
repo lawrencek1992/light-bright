@@ -15,7 +15,7 @@ const ResetWarning = ({ showWarning, setShowWarning }) => {
 
     const reloadPage = () => {
         window.location.reload();
-    }
+    };
 
     return (
         <Modal isOpen={showWarning} toggle={toggle} fade={true} className="ResetWarning" centered>
